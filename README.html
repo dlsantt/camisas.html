@@ -12,26 +12,88 @@
 </head>
 <body>
 
-    <div class="h1"><h1 style="font-style: oblique;" id="h1"> OUTLET</h1></div>
-
-    <a href="SELEÇÕES.html" target="_blank" style ="color: black;"><div class="menu" id ='seleções'>camisas de SELEÇÕES</div></a>
-    <a href="TIMES.html" target="_blank" style ="color: black;"><div class="menu" id ='times'>camisas de TIMES</div></a>
+    <div class="fundoDoTitulo"><h1 style="font-style: oblique; font-size: 50px;" id="titulo"> OUTLET</h1></div>
+    
+    <a href="SELEÇÕES.html" target="_blank" style ="color: darkkhaki;"><div class="menu" id ='seleções'>SELEÇÕES</div></a>
+    <a href="TIMES.html" target="_blank" style ="color: darkkhaki;"><div class="menu" id ='times'>TIMES</div></a>
 
     <br><br><br><h1 style="font-style: oblique;" id="h3">SELEÇÕES</h1>
-    <img src="imagens/BRASIL.jpeg" id="cam1">
-    <img src="imagens/italia3.jpeg" id="cam2">
-    <img src="imagens/argentina.jpg" id="cam3">
+    <div class="michael"><img src="imagens/BRASIL.jpeg"></div>
+    <div class="michael"><img src="imagens/italia3.jpeg"></div>
+    <div class="michael"><img src="imagens/argentina.jpg"></div>
 
     <br><br><br><br><br><br><br><h1 style="font-style: oblique;" id="h2">TIMES</h1>
-    <img src="imagens/barcelona_atuai.webp" id="cam4">
-    <img src="imagens/real.jpeg" id="cam5">
-    <img src="imagens/psg.jpeg" id="cam6">
+    <div class="michael"><img src="imagens/barcelona_atuai.webp"></div>
+    <div class="michael"><img src="imagens/psg.jpeg"></div>
+    <div class="michael"><img src="imagens/real.jpeg"></div>
 
 
 
 
 </body>
 </html>
+
+#CSS
+body{
+    background-color:lightgray
+}
+
+/* id */
+ #seleções{
+    text-align: center;
+    background-color: darkkhaki;
+    width: 50%;
+
+}
+
+#titulo{
+    text-align: center; 
+    font-family:'Courier New', Courier, monospace;
+    height: 32%;
+    margin: 0px;
+}
+
+#h2{
+    text-align: center;
+}
+#h3{
+text-align: center;
+}
+
+/* class */
+.michael {
+    border: 5px solid black;
+    display: inline-block;
+    width: 32%;
+    
+}
+
+.michael img{
+    width: 100%;
+    height: 100% ;
+
+}
+.menu{
+    float: left;
+    width: 50%;
+    background-color:darkkhaki;
+    text-align: center;
+    display: inline-block;
+    color:white;
+    font-size: 30px;
+
+}
+.menu:hover{
+    background-color: darkkhaki;
+    color: aliceblue;
+    font-size: 50px;
+    
+
+}
+.fundoDoTitulo{
+    background-color: khaki;
+
+}
 
 #SELEÇÃO
 <!DOCTYPE html>
