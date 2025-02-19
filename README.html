@@ -30,26 +30,47 @@
 
     <div class ='felipe'>
         <label for="senha">Digite sua senha:</label><br>
-        <input type="password" id ='senha'required><br><br><br>
+        <input type="password" id ='senha'required placeholder ='********' maxlength="12" minlength="8"><br><br><br>
+
     <div class ='felipe'>
-        <label for="novasenha" >Confirme sua senha:</label><br>
+        <label for="novasenha">Confirme sua senha:</label><br>
         <input type="password" id ='novasenha'required><br><br><br>
     </div>
+
     <div class ='felipe'>
     <button type ='button' onclick = 'inacio()' id ='joshua'>Concluir Cadastro</button>
     </div>
+    <div class ='felipe'>
+    <button type ='button' id ='joshua'>Continuar sem conta</button>
+    </div>
+
     <script>
         function inacio(){
-        let nome = document.getElementById('nome').value
+            let nome = document.getElementById('nome').value
             if (nome == '' ){
                 window.alert('O nome não pode conter números ou estar vazio');
             }
-        let email = document.getElementById('email').value
+            let email = document.getElementById('email').value
             if (email == ''){
-                window.alert('o Email tem que conter @ e não pode ser vazio' );
+                window.alert('O Email tem que conter @ e não pode ser vazio' );
             }
-        
+            let senha = document.getElementById('senha').value
+            if (senha == ''){
+                window.alert('A Senha não pode ser vazia');
+            }
+            if (senha.length < 8){
+                window.alert('a senha tem que ter no mínimo 8 caracteres');
+            }
+            let novasenha = document.getElementById('novasenha').value;
+            if (novasenha == ''){
+                window.alert('A senha não pode ser vazia');
+            }
+
+
+            window.location.href = "trabalho.html";
+
         }
+       
     </script>
  
     
