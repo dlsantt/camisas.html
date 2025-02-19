@@ -1,4 +1,61 @@
 #outlet_camisasDeTime.html
+#cadastro
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cadastro</title>
+    <style>
+        body{
+            background-color: gray;
+
+        }
+        .felipe{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class ='felipe'>
+        <h1 style="font-style: unset; text-align: center;">Cadastro do Outlet</h1>
+        <label for="nome">Digite seu nome:</label><br>
+        <input type="text" id ='nome'placeholder ='nome'required><br><br><br>
+    </div>
+
+    <div class ='felipe'>
+        <label for="email">Digite seu email:</label><br>
+        <input type="text" id ='email' placeholder ='nome@email.com'required><br><br><br>
+    </div>
+
+    <div class ='felipe'>
+        <label for="senha">Digite sua senha:</label><br>
+        <input type="password" id ='senha'required><br><br><br>
+    <div class ='felipe'>
+        <label for="novasenha" >Confirme sua senha:</label><br>
+        <input type="password" id ='novasenha'required><br><br><br>
+    </div>
+    <div class ='felipe'>
+    <button type ='button' onclick = 'inacio()' id ='joshua'>Concluir Cadastro</button>
+    </div>
+    <script>
+        function inacio(){
+        let nome = document.getElementById('nome').value
+            if (nome == '' ){
+                window.alert('O nome não pode conter números ou estar vazio');
+            }
+        let email = document.getElementById('email').value
+            if (email == ''){
+                window.alert('o Email tem que conter @ e não pode ser vazio' );
+            }
+        
+        }
+    </script>
+ 
+    
+</body>
+</html>
+
 #inicio
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -18,16 +75,69 @@
     <a href="TIMES.html" target="_blank" style ="color: darkkhaki;"><div class="menu" id ='times'>TIMES</div></a>
 
     <br><br><br><h1 style="font-style: oblique;" id="h3">SELEÇÕES</h1>
-    <div class="michael"><img src="imagens/BRASIL.jpeg"></div>
-    <div class="michael"><img src="imagens/italia3.jpeg"></div>
-    <div class="michael"><img src="imagens/argentina.jpg"></div>
+    <div class="ota-dive">
+        <a href = 'SELEÇÕES.html' target ='_blank'><div class="michael"><img src="nigeriaatual.jpg"></div></a>
+        <h2>camisa nigéria II 2018</h2>
+    </div>
+
+        <div class="ota-dive">
+        <a href = 'SELEÇÕES.html' target ='_blank'><div class="michael" class="ota-dive"><img src="imagens/italia3.jpeg"></div></a>
+        <h2>camisa itália Versace</h2>
+    </div>
+
+    <div class="ota-dive">
+        <a href = 'SELEÇÕES.html' target ='_blank'><div class="michael"><img src="imagens/argentina.jpg"></div></a>
+        <h2>camisa Argentina II 2022</h2>
+    </div>
+        <br><br><br><br><br><br><br><h1 style="font-style: oblique;" id="h2">SELEÇÕES RETRÔ</h1>
+
+    <div class="ota-dive">
+        <a href="" target ='_blank'><div class="michael"><img src="francaretro.jpg"></div></a>
+        <h2>camisa Argentina II 2022</h2>
+    </div>
+
+    <div class="ota-dive">
+        <a href="" target ='_blank'><div class="michael"><img src="brasilretro2.jpeg"></div></a>
+        <h2>camisa Argentina II 2022</h2>
+    </div>
+
+    <div class="ota-dive">
+        <a href="" target ='_blank'><div class="michael"><img src="holandaretro.jpg"></div></a>
+        <h2>camisa Argentina II 2022</h2>
+    </div>
 
     <br><br><br><br><br><br><br><h1 style="font-style: oblique;" id="h2">TIMES</h1>
-    <div class="michael"><img src="imagens/barcelona_atuai.webp"></div>
-    <div class="michael"><img src="imagens/psg.jpeg"></div>
-    <div class="michael"><img src="imagens/real.jpeg"></div>
+    <div class="ota-dive">
+        <a href="TIMES.html" target ='_blank'><div class="michael"><img src="imagens/barcelona_atuai.webp"></div></a>
+        <h2>camisa Argentina II 2022</h2>
+    </div>
 
+    <div class="ota-dive">
+        <a href="TIMES.html" target ='_blank'><div class="michael"><img src="imagens/psg.jpeg"></div></a>
+        <h2>camisa Argentina II 2022</h2>
+    </div>
 
+    <div class="ota-dive">
+        <a href="TIMES.html" target ='_blank'><div class="michael"><img src="imagens/real.jpeg"></div></a>
+        <h2>camisa Argentina II 2022</h2>
+    </div>
+
+    <br><br><br><br><br><br><br><h1 style="font-style: oblique;" id="h2">TIMES RETRÔ</h1>
+
+    <div class="ota-dive">
+        <a href="" target ='_blank'><div class="michael"><img src="santosretro.webp"></div></a>
+        <h2>camisa Argentina II 2022</h2>
+    </div>
+
+    <div class="ota-dive">
+        <a href="" target ='_blank'><div class="michael"><img src="barçaretro.jpeg"></div></a>
+        <h2>camisa Argentina II 2022</h2>
+    </div>
+
+    <div class="ota-dive">
+        <a href="" target ='_blank'><div class="michael"><img src="milanretro.jpeg"></div></a>
+        <h2>camisa Argentina II 2022</h2>
+    </div>
 
 
 </body>
@@ -64,7 +174,7 @@ text-align: center;
 .michael {
     border: 5px solid black;
     display: inline-block;
-    width: 32%;
+    width: 100%;
     
 }
 
@@ -93,6 +203,11 @@ text-align: center;
 .fundoDoTitulo{
     background-color: khaki;
 
+}
+
+.ota-dive {
+    display: inline-block;
+    width: 32%;
 }
 
 #SELEÇÃO
@@ -131,7 +246,6 @@ text-align: center;
 </body>
 </html>
 
-
 #ATUAL
 <!DOCTYPE html>
 <html lang="en">
@@ -145,9 +259,6 @@ text-align: center;
     
 </body>
 </html>
-
-
-
 
 #TIMES
 <!DOCTYPE html>
