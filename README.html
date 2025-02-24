@@ -17,10 +17,11 @@
     </style>
 </head>
 <body>
+    <form action="">
     <div class ='felipe'>
         <h1 style="font-style: unset; text-align: center;">Cadastro do Outlet</h1>
         <label for="nome">Digite seu nome:</label><br>
-        <input type="text" id ='nome'placeholder ='nome'required><br><br><br>
+        <input type="text" required="required" name="text" id ='nome' placeholder="nome" pattern="[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+$" /><br><br><br>
     </div>
 
     <div class ='felipe'>
@@ -34,20 +35,24 @@
 
     <div class ='felipe'>
         <label for="novasenha">Confirme sua senha:</label><br>
-        <input type="password" id ='novasenha'required><br><br><br>
+        <input type="password" id ='novasenha'required placeholder="********" maxlength ='12' minlength = '8'><br><br><br>
     </div>
 
     <div class ='felipe'>
     <button type ='button' onclick = 'inacio()' id ='joshua'>Concluir Cadastro</button>
     </div>
     <div class ='felipe'>
-    <button type ='button' id ='joshua'>Continuar sem conta</button>
+    <button type ='submit' id ='joshua'><a href="trabalho.html" style ='color:black'>Continuar sem conta</a></button>
     </div>
+    </form>
 
     <script>
         function inacio(){
             let nome = document.getElementById('nome').value
-            if (nome == '' ){
+            if (nome == ''){
+                window.alert('O nome não pode conter números ou estar vazio');
+            }
+            if (nome >=1 || nome <= 99999999999999999999999999999999999999999999999999999999999999999999999){
                 window.alert('O nome não pode conter números ou estar vazio');
             }
             let email = document.getElementById('email').value
@@ -59,24 +64,27 @@
                 window.alert('A Senha não pode ser vazia');
             }
             if (senha.length < 8){
-                window.alert('a senha tem que ter no mínimo 8 caracteres');
+                window.alert('A senha tem que ter no mínimo 8 caracteres');
             }
             let novasenha = document.getElementById('novasenha').value;
             if (novasenha == ''){
                 window.alert('A senha não pode ser vazia');
             }
-
-
+            if (novasenha.length < 8){
+                window.alert('A senha tem que ter no mínimo 8 caracteres ')
+            }
+            if (novasenha != senha){
+                window.alert('As senhas estão diferentes, tente novamente.')  
+            }
             window.location.href = "trabalho.html";
-
         }
+    
        
     </script>
  
     
 </body>
 </html>
-
 #inicio
 <!DOCTYPE html>
 <html lang="pt-br"> 
@@ -418,7 +426,6 @@ table, tr,td{
 </body>
 </html>
 
-#TIMES
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -429,9 +436,9 @@ table, tr,td{
 </head>
 <body>
         <!--<br><img src="download.jpeg" width="30px">-->
-        <div class="h1"><h1 id="h1"> OUTLET</h1></div>
-        <a href="SELEÇÕES.html" target="_blank" style ="color: white;"><div class="menu" id ='seleções'>RETRÔ</div></a>
-        <a href="TIMES.html" target="_blank" style ="color: white;"><div class="menu" id ='times'>ATUAL</div></a>
+    <div class="fundoDoTitulo"><h1 style="font-style: oblique; font-size: 50px;" id="titulo"><a href="trabalho.html"  style="color: black;">OUTLET</a></h1></div>
+    <a href="timesAtuais.html" target="_blank" style ="color: darkkhaki;"><div class="menu" id ='seleções'>ATUAIS</div></a>
+    <a href="timesRetro.html" target="_blank" style ="color: darkkhaki;"><div class="menu" id ='times'>RETRÔ</div></a><br><br>
     
             <!--<br><br><br><a href="TIMES.html"><img src="barcelona.jpeg" id="cam1"></a>
             <a href="SELEÇÕES.html"><img src="Italia.jpeg" id="cam1"></a>-->
