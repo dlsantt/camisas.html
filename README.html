@@ -3,24 +3,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="icon" type="image/x-icon" href="Imagens/logo.jpg">
+    <link rel="stylesheet" href="trabalho.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>cadastro</title>
     <style>
         body{
-            background-color: gray;
+            background-color:black;
 
         }
         .felipe{
             text-align: center;
         }
+        .painel {
+            border-radius: 20px;
+            width: 400px;
+            margin: 50px auto;
+            background-color: floralwhite;
+            margin: auto;
+        }
     </style>
 </head>
 <body>
+    <h1 id="cadastro" style="color:floralwhite" >Cadastro do Outlet</h1>
+    <div class="painel" style="width: 400px; height:400px ;">
     <form action="">
     <div class ='felipe'>
-        <h1 style="font-style: unset; text-align: center;">Cadastro do Outlet</h1>
-        <label for="nome">Digite seu nome:</label><br>
+        
+        <br><br><label for="nome">Digite seu nome:</label><br>
         <input type="text" required="required" name="text" id ='nome' placeholder="nome" pattern="[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+$" /><br><br><br>
     </div>
 
@@ -45,38 +56,51 @@
     <button type ='submit' id ='joshua'><a href="trabalho.html" style ='color:black'>Continuar sem conta</a></button>
     </div>
     </form>
+    </div>  
 
     <script>
         function inacio(){
+            let erro = false;
             let nome = document.getElementById('nome').value
             if (nome == ''){
                 window.alert('O nome não pode conter números ou estar vazio');
+                erro = true;
             }
             if (nome >=1 || nome <= 99999999999999999999999999999999999999999999999999999999999999999999999){
                 window.alert('O nome não pode conter números ou estar vazio');
+                erro = true;
             }
             let email = document.getElementById('email').value
             if (email == ''){
                 window.alert('O Email tem que conter @ e não pode ser vazio' );
+                erro = true;
             }
             let senha = document.getElementById('senha').value
             if (senha == ''){
                 window.alert('A Senha não pode ser vazia');
+                erro = true;
             }
             if (senha.length < 8){
                 window.alert('A senha tem que ter no mínimo 8 caracteres');
+                erro = true;
             }
             let novasenha = document.getElementById('novasenha').value;
             if (novasenha == ''){
                 window.alert('A senha não pode ser vazia');
+                erro = true;
             }
             if (novasenha.length < 8){
                 window.alert('A senha tem que ter no mínimo 8 caracteres ')
+                erro = true;
             }
             if (novasenha != senha){
                 window.alert('As senhas estão diferentes, tente novamente.')  
+                erro = true;
             }
-            window.location.href = "trabalho.html";
+            if (!erro) {
+                window.location.href = "trabalho.html";
+            }
+            
         }
     
        
@@ -89,6 +113,7 @@
 <!DOCTYPE html>
 <html lang="pt-br"> 
 <head>
+    <link rel="icon" type="image/x-icon" href="Imagens/logo.jpg">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LOJA DE CAMISA DE TIME</title>
@@ -99,6 +124,7 @@
 
 </head>
 <body>
+    
     <div class="fundoDoTitulo"><h1 style="font-style: oblique; font-size: 50px;" id="titulo"><a href="trabalho.html" style="color: black;">OUTLET</a></h1></div>
     <a href="SELEÇÕES.html" target="_blank" style ="color: darkkhaki;"><div class="menu" id ='seleções'>SELEÇÕES</div></a>
     <a href="TIMES.html" target="_blank" style ="color: darkkhaki;"><div class="menu" id ='times'>TIMES</div></a><br><br>
@@ -334,6 +360,11 @@ table, tr,td{
     border-style: double;
     
 }
+.table{
+    border: 5px;
+    border-style: double;
+    
+}
 .slç_tms{
     float: left;
     width: 100%;
@@ -343,10 +374,18 @@ table, tr,td{
     color:white;
     font-size: 20px;
 }
+#cadastro{
+    font-size: 92px;
+    font-style: unset;
+    text-align: center;
+    color: white;
+
+}
 #SELEÇÃO
 <!DOCTYPE html>
 <html lang="PT-BR">
 <head>
+    <link rel="icon" type="image/x-icon" href="Imagens/logo.jpg">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>seleções</title>
@@ -356,8 +395,8 @@ table, tr,td{
 </head>
 <body>
     <div class="fundoDoTitulo"><h1 style="font-style: oblique; font-size: 50px;" id="titulo"><a href="trabalho.html"  style="color: black;">OUTLET</a></h1></div>
-    <a href="SELEÇÕES.html" target="_blank" style ="color: darkkhaki;"><div class="menu" id ='seleções'>ATUAIS</div></a>
-    <a href="TIMES.html" target="_blank" style ="color: darkkhaki;"><div class="menu" id ='times'>RETRÔ</div></a><br><br>
+    <a href="seleções_atual.html" target="_blank" style ="color: darkkhaki;"><div class="menu" id ='seleções'>ATUAIS</div></a>
+    <a href="seleções_rêtro.html" target="_blank" style ="color: darkkhaki;"><div class="menu" id ='times'>RETRÔ</div></a><br><br>
 
 
      <!-- Carousel -->
@@ -377,12 +416,12 @@ table, tr,td{
             <img src="imagens/nigeriaatual.jpg" alt="Los Angeles" style="width:50%" height="900px">
           </div>
           <div class="carousel-item">
-            <img src="imagens/" style="width:49%" height="900px">
-            <img src="imagens/" style="width:50%" height="900px" >
+            <img src="imagens/alemanharetro1.jpeg" style="width:49%" height="900px">
+            <img src="imagens/francaretro.jpg" style="width:50%" height="900px" >
           </div>
           <div class="carousel-item">
-            <img src="imagens/" style="width:49%" height="900px">
-            <img src="imagens/" style="width:50%" height="900px">
+            <img src="imagens/holandaretro.jpg" style="width:49%" height="900px">
+            <img src="imagens/BRASIL.jpeg" style="width:50%" height="900px">
           </div>
         </div>
         
@@ -394,6 +433,38 @@ table, tr,td{
           <span class="carousel-control-next-icon"></span>
         </button>
         </div>
+
+        <br><br><br><h1 style="font-style: oblique;" id="h3">SELEÇÕES ATUAIS</h1>
+
+        <table class="table">
+            <tr>
+                <td><a href="seleções_atual.html" target="_blank"><img src="imagens/nigeriaatual.jpg" width="610px" height="610x"></td></a>
+                <td><a href="seleções_atual.html" target="_blank"><img src="imagens/italia3.jpeg" width="610px" height="610px"></td></a>
+                <td><a href="seleções_atual.html" target="_blank"><img src="imagens/argentina.jpg" width="610px" height="610px"></td></a>
+            </tr>
+            <tr>
+                <td>CAMISA NIGERIA ATUAL</td>
+                <td>CAMISA ITALIA ATUAL</td>
+                <td>CAMISA ARGENTINA ATUAL</td>
+            </tr>
+        </table>
+
+        <br><br><br><h1 style="font-style: oblique;" id="h2">SELEÇÕES RETRÔ</h1>
+
+        
+        <table class="table">
+            <tr>
+                <td><a href="seleções_rêtro.html" target="_blank"><img src="imagens/francaretro.jpg" width="605px" height="605px"></td></a>
+                <td><a href="seleções_rêtro.html" target="_blank"><img src="imagens/brasilretro2.jpeg" width="605px" height="605px"></td></a>
+                <td><a href="seleções_rêtro.html" target="_blank"><img src="imagens/holandaretro.jpg" width="605px" height="605px"></td></a>
+            </tr>
+            <tr>
+                <td>CAMISA FRANÇA RETRÔ</td>
+                <td>CAMISA BRASIL RETRÔ</td>
+                <td>CAMISA HOLANDA RETRÔ</td>
+            </tr>
+        </table>
+    
     
     
 </body>
@@ -402,47 +473,137 @@ table, tr,td{
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="icon" type="image/x-icon" href="Imagens/logo.jpg">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>seleções rêtro</title>
     <link rel="stylesheet" href ="trabalho.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
+    <div class="fundoDoTitulo"><h1 style="font-style: oblique; font-size: 50px;" id="titulo"><a href="trabalho.html"  style="color: black;">OUTLET</a></h1></div>
+    <div style="background-color: darkkhaki;"><h1 style="font-style: oblique;" id="h3">SELEÇÕES RETRÔ</h1></div>
+
+     <!-- Carousel -->
+      <div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+          <!-- Indicators/dots -->
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+          <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+          <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+        </div>
+          
+          <!--The slideshow/carousel-->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="imagens/argentinaretro1.jpeg" alt="Los Angeles" style="width:49%" height="900px">
+            <img src="imagens/francaretro.jpg" alt="Los Angeles" style="width:50%" height="900px">
+          </div>
+          <div class="carousel-item">
+            <img src="imagens/croaciaretro.jpeg" style="width:49%" height="900px">
+            <img src="imagens/alemanharetro1.jpeg" style="width:50%" height="900px" >
+          </div>
+          <div class="carousel-item">
+            <img src="imagens/holandaretro.jpg" style="width:49%" height="900px">
+            <img src="imagens/brasilretro2.jpeg" style="width:50%" height="900px">
+          </div>
+          </div>
+          
+          <!--Left and right controls/icons-->
+          <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next" >
+            <span class="carousel-control-next-icon"></span>
+          </button>
+      </div>
+
+        <br><br><br>
+      <table id="table">
+        <tr>
+            <td><a href="seleções_rêtro.html" target="_blank"><img src="imagens/francaretro.jpg" width="605px" height="605px"></td></a>
+            <td><a href="seleções_rêtro.html" target="_blank"><img src="imagens/brasilretro2.jpeg" width="605px" height="605px"></td></a>
+            <td><a href="seleções_rêtro.html" target="_blank"><img src="imagens/holandaretro.jpg" width="605px" height="605px"></td></a>
+        </tr>
+        <tr>
+            <td>CAMISA FRANÇA RETRÔ</td>
+            <td>CAMISA BRASIL RETRÔ</td>
+            <td>CAMISA HOLANDA RETRÔ</td>
+        </tr>
+    </table>
+  
+    
     
 </body>
 </html>
-
 #ATUAL
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="icon" type="image/x-icon" href="Imagens/logo.jpg">
+    <link rel="stylesheet" type="img" src>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>seleções atual</title>
     <link rel="stylesheet" href ="trabalho.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
-    
-</body>
-</html>
+<div class="fundoDoTitulo"><h1 style="font-style: oblique; font-size: 50px;" id="titulo"><a href="trabalho.html"  style="color: black;">OUTLET</a></h1></div>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>times</title>
-    <link rel="stylesheet" href ="trabalho.css">
-</head>
-<body>
-        <!--<br><img src="download.jpeg" width="30px">-->
-    <div class="fundoDoTitulo"><h1 style="font-style: oblique; font-size: 50px;" id="titulo"><a href="trabalho.html"  style="color: black;">OUTLET</a></h1></div>
-    <a href="timesAtuais.html" target="_blank" style ="color: darkkhaki;"><div class="menu" id ='seleções'>ATUAIS</div></a>
-    <a href="timesRetro.html" target="_blank" style ="color: darkkhaki;"><div class="menu" id ='times'>RETRÔ</div></a><br><br>
-    
-            <!--<br><br><br><a href="TIMES.html"><img src="barcelona.jpeg" id="cam1"></a>
-            <a href="SELEÇÕES.html"><img src="Italia.jpeg" id="cam1"></a>-->
-    
+        <div style="background-color: darkkhaki;"><h1 style="font-style: oblique;" id="h3">SELEÇÕES ATUAIS</h1></div>
+     <!-- Carousel -->
+     <div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+        <!-- Indicators/dots -->
+        <div class="carousel-indicators">       
+          <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+          <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+          <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+        </div>
+        
+         <!--The slideshow/carousel-->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="imagens/argentina.jpg" alt="Los Angeles" style="width:49%" height="900px">
+            <img src="imagens/nigeriaatual.jpg" alt="Los Angeles" style="width:50%" height="900px">
+          </div>
+          <div class="carousel-item">
+            <img src="imagens/belgivaatual.jpg" style="width:49%" height="900px">
+            <img src="imagens/inglaterraatual.jpg" style="width:50%" height="900px" >
+          </div>
+          <div class="carousel-item">
+            <img src="imagens/françaatual.jpg" style="width:49%" height="900px">
+            <img src="imagens/suiçaatual.jpg" style="width:50%" height="900px">
+          </div>
+        </div>
+        
+        <!--Left and right controls/icons-->
+        <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next" >
+          <span class="carousel-control-next-icon"></span>
+        </button>
+        </div>
+
+        
+        <br><br><br>
+        <table class="table">
+            <tr>
+                <td><a href="seleções_atual.html" target="_blank"><img src="imagens/nigeriaatual.jpg" width="610px" height="610x"></td></a>
+                <td><a href="seleções_atual.html" target="_blank"><img src="imagens/italia3.jpeg" width="610px" height="610px"></td></a>
+                <td><a href="seleções_atual.html" target="_blank"><img src="imagens/argentina.jpg" width="610px" height="610px"></td></a>
+            </tr>
+            <tr>
+                <td>CAMISA NIGERIA ATUAL</td>
+                <td>CAMISA ITALIA ATUAL</td>
+                <td>CAMISA ARGENTINA ATUAL</td>
+            </tr>
+        </table>
     
 </body>
 </html>
