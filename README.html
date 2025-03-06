@@ -117,6 +117,7 @@
 </body>
 </html>
 
+
 #inicio
 <!DOCTYPE html>
 <html lang="pt-br"> 
@@ -175,7 +176,7 @@
 
     
 
-    <br><br><br><h1 style="font-style: oblique;" id="h3">SELEÇÕES</h1>
+    <br><br><br><h1 style="font-style: oblique;" id="h3">SELEÇÕES ATUAIS</h1>
 
     <table id="table">
         <tr>
@@ -184,9 +185,9 @@
             <td><a href="seleções_atual.html" target="_blank"><img src="imagens/argentina.jpg" width="610px" height="610px"></td></a>
         </tr>
         <tr>
-            <td>CAMISA NIGERIA ATUAL</td>
-            <td>CAMISA ITALIA ATUAL</td>
-            <td>CAMISA ARGENTINA ATUAL</td>
+            <td>CAMISA NIGERIA ATUAL<br><button onclick="compre()">compre</button></td>
+            <td>CAMISA ITALIA ATUAL<br><button onclick="compre()">compre</button></td>
+            <td>CAMISA ARGENTINA ATUAL<br><button onclick="compre()">compre</button></td>
         </tr>
     </table>
     <!--<div class="ota-dive">
@@ -213,9 +214,9 @@
             <td><a href="seleções_rêtro.html" target="_blank"><img src="imagens/holandaretro.jpg" width="605px" height="605px"></td></a>
         </tr>
         <tr>
-            <td>CAMISA FRANÇA RETRÔ</td>
-            <td>CAMISA BRASIL RETRÔ</td>
-            <td>CAMISA HOLANDA RETRÔ</td>
+            <td>CAMISA FRANÇA RETRÔ<br><button onclick="compre()">compre</button></td>
+            <td>CAMISA BRASIL RETRÔ<br><button onclick="compre()">compre</button></td>
+            <td>CAMISA HOLANDA RETRÔ<br><button onclick="compre()">compre</button></td>
         </tr>
     </table>
 
@@ -243,9 +244,9 @@
             <td><a href="timesatuais.html" target="_blank"><img src="imagens/real.jpeg" width="610px" height="610px"></td></a>
         </tr>
         <tr>
-            <td>CAMISA BARCELONA ATUAL</td>
-            <td>CAMISA PSG ATUAL</td>
-            <td>CAMISA REAL MADRID ATUAL</td>
+            <td>CAMISA BARCELONA ATUAL<br><button onclick="compre()">compre</button></td>
+            <td>CAMISA PSG ATUAL<br><button onclick="compre()">compre</button></td>
+            <td>CAMISA REAL MADRID ATUAL<br><button onclick="compre()">compre</button></td>
         </tr>
     </table>
 
@@ -273,9 +274,9 @@
             <td><a href="timesretro.html" target="_blank"><img src="imagens/milanretro.jpeg" width="605px" height="605px"></td></a>
         </tr>
         <tr>
-            <td>CAMISA SANTOS RETRÔ</td>
-            <td>CAMISA BARCELONA RETRÔ</td>
-            <td>CAMISA MILAN RETRÔ</td>
+            <td>CAMISA SANTOS RETRÔ<br><button onclick="compre()">compre</button></td>
+            <td>CAMISA BARCELONA RETRÔ<br><button onclick="compre()">compre</button></td>
+            <td>CAMISA MILAN RETRÔ<br><button onclick="compre()">compre</button></td>
         </tr>
     </table>
 
@@ -293,14 +294,23 @@
         <a href="timesretro.html" target ='_blank'><div class="michael"><img src="imagens/milanretro.jpeg"></div></a>
         <h2>camisa Milan 2006/07</h2>
     </div>-->
+    
+    <script>
+        function compre(){
+            document.getElementById('compre');
+            compra = window.alert('Tem certeza da sua escolha?')
+            window.alert('compra bem-sucedida!!!');
+        }
+    </script>
 
 
 
 </body>
 </html>
 #CSS
+#CSS
 body{
-    background-color:lightgray
+    background-color:black;
 }
 
 /* id */
@@ -327,7 +337,7 @@ text-align: center;
 
 /* class */
 .michael {
-    border: 5px solid black;
+    border: 5px solid white;
     display: inline-block;
     width: 100%;
     
@@ -390,6 +400,7 @@ table, tr,td{
     color: white;
 
 }
+
 #SELEÇÃO
 <!DOCTYPE html>
 <html lang="PT-BR">
@@ -452,9 +463,9 @@ table, tr,td{
                 <td><a href="seleções_atual.html" target="_blank"><img src="imagens/argentina.jpg" width="610px" height="610px"></td></a>
             </tr>
             <tr>
-                <td>CAMISA NIGERIA ATUAL</td>
-                <td>CAMISA ITALIA ATUAL</td>
-                <td>CAMISA ARGENTINA ATUAL</td>
+                <td>CAMISA NIGERIA ATUAL<br><button onclick="compre()">compre</button></td>
+                <td>CAMISA ITALIA ATUAL<br><button onclick="compre()">compre</button></td>
+                <td>CAMISA ARGENTINA ATUAL<br><button onclick="compre()">compre</button></td>
             </tr>
         </table>
 
@@ -468,16 +479,25 @@ table, tr,td{
                 <td><a href="seleções_rêtro.html" target="_blank"><img src="imagens/holandaretro.jpg" width="605px" height="605px"></td></a>
             </tr>
             <tr>
-                <td>CAMISA FRANÇA RETRÔ</td>
-                <td>CAMISA BRASIL RETRÔ</td>
-                <td>CAMISA HOLANDA RETRÔ</td>
+                <td>CAMISA FRANÇA RETRÔ<br><button onclick="compre()">compre</button></td>
+                <td>CAMISA BRASIL RETRÔ<br><button onclick="compre()">compre</button></td>
+                <td>CAMISA HOLANDA RETRÔ<br><button onclick="compre()">compre</button></td>
             </tr>
         </table>
     
-    
+<script>
+  function compre(){
+  document.getElementById('compre')
+  compra = window.alert('Tem certeza da sua escolha?')
+  window.alert('compra bem-sucedida!!!')
+}
+</script>
+  
+  
     
 </body>
 </html>
+
 #RETRO
 <!DOCTYPE html>
 <html lang="en">
@@ -608,11 +628,31 @@ table, tr,td{
                 <td><a href="seleções_atual.html" target="_blank"><img src="imagens/argentina.jpg" width="610px" height="610px"></td></a>
             </tr>
             <tr>
-                <td>CAMISA NIGERIA ATUAL</td>
-                <td>CAMISA ITALIA ATUAL</td>
-                <td>CAMISA ARGENTINA ATUAL</td>
+                <td>CAMISA NIGERIA ATUAL<br><button onclick="compre()">compre</button></td>
+                <td>CAMISA ITALIA ATUAL<br><button onclick="compre()">compre</button></td>
+                <td>CAMISA ARGENTINA ATUAL<br><button onclick="compre()">compre</button></td>
             </tr>
         </table>
+
+        <table class="table">
+          <tr>
+              <td><a href="seleções_atual.html" target="_blank"><img src="imagens/escocia.jpeg" width="605px" height="605px"></td></a>
+              <td><a href="seleções_atual.html" target="_blank"><img src="imagens/eslovenia.webp" width="605px" height="605px"></td></a>
+              <td><a href="seleções_atual.html" target="_blank"><img src="imagens/honduras.jpg" width="605px" height="605px"></td></a>
+          </tr>
+          <tr>
+              <td>CAMISA DA ESCOCIA ATUAL<br><button onclick="compre()">compre</button></td>
+              <td>CAMISA DA ESLOVENIA ATUAL<br><button onclick="compre()">compre</button></td>
+              <td>CAMISA HONDURAS ATUAL<br><button onclick="compre()">compre</button></td>
+          </tr>
+      </table>
+<script>
+  function compre(){
+  document.getElementById('compre')
+  compra = window.alert('Tem certeza da sua escolha?')
+  window.alert('compra bem-sucedida!!!')
+}
+</script>
         
 </body>
 </html>
@@ -678,9 +718,9 @@ table, tr,td{
                 <td><a href="timesAtuais.html" target="_blank"><img src="imagens/liverpoolatual2.jpeg" width="610px" height="610px"></td></a>
             </tr>
             <tr>
-                <td>CAMISA DO MANCHESTER CITY ATUAL</td>
-                <td>CAMISA DA NAPOLI ATUAL</td>
-                <td>CAMISA DO LIVERPOOL ATUAL</td>
+                <td>CAMISA DO MANCHESTER CITY ATUAL<br><button onclick="compre()">compre</button></td>
+                <td>CAMISA DA NAPOLI ATUAL<br><button onclick="compre()">compre</button></td>
+                <td>CAMISA DO LIVERPOOL ATUAL<br><button onclick="compre()">compre</button></td>
             </tr>
         </table>
 
@@ -694,14 +734,20 @@ table, tr,td{
                 <td><a href="timesRetro.html" target="_blank"><img src="imagens/unitedretro.webp" width="605px" height="605px"></td></a>
             </tr>
             <tr>
-                <td>CAMISA DO ARSENAL RETRÔ</td>
-                <td>CAMISA DA INTER DE MILÃO RETRÔ</td>
-                <td>CAMISA DO MANCHESTER UNITED RETRÔ</td>
+                <td>CAMISA DO ARSENAL RETRÔ<br><button onclick="compre()">compre</button></td>
+                <td>CAMISA DA INTER DE MILÃO RETRÔ<br><button onclick="compre()">compre</button></td>
+                <td>CAMISA DO MANCHESTER UNITED RETRÔ<br><button onclick="compre()">compre</button></td>
             </tr>
         </table>
     
     
-    
+    <script>
+      function compre(){
+        document.getElementById('compre')
+        compra = window.alert('Tem certeza da sua escolha?')
+        window.alert('compra bem-sucedida!!!')
+      }
+    </script>
 </body>
 </html>
 #timesretro
@@ -763,9 +809,9 @@ table, tr,td{
                 <td><a href="timesRetro.html" target="_blank"><img src="imagens/VASCO.jpg" width="605px" height="605px"></td></a>
             </tr>
             <tr>
-                <td>CAMISA DO REAL MADRID RETRÔ</td>
-                <td>CAMISA DO LEEDS RETRÔ</td>
-                <td>CAMISA DO VASCO RETRÔ</td>
+                <td>CAMISA DO REAL MADRID RETRÔ<br><button onclick="compre()">compre</button></td>
+                <td>CAMISA DO LEEDS RETRÔ<br><button onclick="compre()">compre</button></td>
+                <td>CAMISA DO VASCO RETRÔ<br><button onclick="compre()">compre</button></td>
             </tr>
         </table>
     
@@ -776,13 +822,19 @@ table, tr,td{
             <td><a href="timesRetro.html" target="_blank"><img src="imagens/unitedretro.webp" width="605px" height="605px"></td></a>
         </tr>
         <tr>
-            <td>CAMISA DO ARSENAL RETRÔ</td>
-            <td>CAMISA DA INTER DE MILÃO RETRÔ</td>
-            <td>CAMISA DO MANCHESTER UNITED RETRÔ</td>
+            <td>CAMISA DO ARSENAL RETRÔ<br><button onclick="compre()">compre</button></td>
+            <td>CAMISA DA INTER DE MILÃO RETRÔ<br><button onclick="compre()">compre</button></td>
+            <td>CAMISA DO MANCHESTER UNITED RETRÔ<br><button onclick="compre()">compre</button></td>
         </tr>
     </table>
 
-  
+<script>
+  function compre(){
+  document.getElementById('compre')
+  compra = window.alert('Tem certeza da sua escolha?')
+  window.alert('compra bem-sucedida!!!')
+}
+</script>
     
     
 </body>
@@ -846,9 +898,9 @@ table, tr,td{
             <td><a href="timesRetro.html" target="_blank"><img src="imagens/chelseaatual.jpeg" width="605px" height="605px"></td></a>
         </tr>
         <tr>
-            <td>CAMISA DO TOTTENHAM ATUAL</td>
-            <td>CAMISA DO PSG ATUAL</td>
-            <td>CAMISA DO CHELSEA ATUAL</td>
+            <td>CAMISA DO TOTTENHAM ATUAL<br><button onclick="compre()">compre</button></td>
+            <td>CAMISA DO PSG ATUAL<br><button onclick="compre()">compre</button></td>
+            <td>CAMISA DO CHELSEA ATUAL<br><button onclick="compre()">compre</button></td>
         </tr>
     </table>
     
@@ -859,12 +911,20 @@ table, tr,td{
             <td><a href="timesRetro.html" target="_blank"><img src="imagens/lazioatual.jpeg" width="605px" height="605px"></td></a>
         </tr>
         <tr>
-            <td>CAMISA DO BRAGA ATUAL</td>
-            <td>CAMISA DO BENFICA ATUAL</td>
-            <td>CAMISA DA LAZIO ATUAL</td>
+            <td>CAMISA DO BRAGA ATUAL<br><button onclick="compre()">compre</button></td>
+            <td>CAMISA DO BENFICA ATUAL<br><button onclick="compre()">compre</button></td>
+            <td>CAMISA DA LAZIO ATUAL<br><button onclick="compre()">compre</button></td>
         </tr>
     </table>
 
     
+<script>
+  function compre(){
+  document.getElementById('compre')
+  compra = window.alert('Tem certeza da sua escolha?')
+  window.alert('compra bem-sucedida!!!')
+}
+</script>
+
 </body>
 </html>
